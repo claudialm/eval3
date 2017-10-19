@@ -25,10 +25,12 @@ class Welcome extends CI_Controller
 		$name = $this->input->post('nombre1');
 		$lastname = $this->input->post('apellido1');
 
+		echo "Nombre: ".$name."  Apellido: ".$lastname;
+
 
 		$data = array('nombre' => $this->input->post('nombre1'),'apellido' => $this->input->post('apellido1') );
 
-
+		$this->form_model->guardar($data);
 
 
 		$this->load->view('formulario');
