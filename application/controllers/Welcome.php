@@ -1,16 +1,36 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends CI_Controller
+{
 
-	function __construct(){
+	function __construct()
+	{
 		parent::__construct();
 		$this->load->helper('form');
-		//$this->load->model('form_model');  
+		$this->load->model('form_model');  
 	}
 
-	public function index()
+	 public function index()
 	{
+	
+	$this->load->view('eval3');
+}
+
+
+	function validar()
+{
+
+		
+		$name = $this->input->post('nombre1');
+		$lastname = $this->input->post('apellido1');
+
+
+		$data = array('nombre' => $this->input->post('nombre1'),'apellido' => $this->input->post('apellido1') );
+
+
+
+
 		$this->load->view('formulario');
 	}
 }
