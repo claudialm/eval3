@@ -14,7 +14,7 @@ class Welcome extends CI_Controller
 	 public function index()
 	{
 	
-	$this->load->view('eval3');
+	$this->load->view('formulario');
 }
 
 
@@ -36,6 +36,6 @@ class Welcome extends CI_Controller
 
 
 
-		$this->load->view('formulario');
+		
 	}
 }
